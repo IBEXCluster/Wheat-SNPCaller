@@ -44,6 +44,7 @@ tabix version 0.2.6 <br/>
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Chr_split.png)
 
 <p align="center"> Figure (a) Pipeline steps in Data processing </p>
+<br/>
 
 ## 2. Chromosome split table 
 As we know, the Wheat genome size is 5x bigger than human genome. To process efficiently, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. 
