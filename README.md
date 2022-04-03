@@ -50,7 +50,7 @@ tabix version 0.2.6 <br/>
 As we know, the Wheat genome size is 5x bigger than human genome. To efficiently process the GenotypeGVCFs, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. We furtehr developed a load balancing model for optimal chromosome splitting and this feature is useful for (a) reducing the execution time and (b) majority of the chunks will be completed at the sametime. Figure (b) will be an example for chromosome split table, which has four entities: (i) Chromosome number (ii) Chunk number (iii) start position and (iv) end position. This chromosome split table provides disjoint chunks and hence any GATK tools can be executed independently without any prerequisites.  
 
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Chr_split.png)
-<p align="center"> Figure (b) Chromosome split intervals </p>
+<p align="center"> <b> Figure (b) </b> Chromosome split intervals </p>
 <br/>
 
 ## 3. Downstream analysis
