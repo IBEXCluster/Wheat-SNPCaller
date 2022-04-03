@@ -47,15 +47,15 @@ tabix version 0.2.6 <br/>
 <br/>
 
 ## 2. Chromosome split table 
-As we know, the Wheat genome size is 5x bigger than human genome. To efficiently process the GenotypeGVCFs, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. We furtehr developed a load balancing model for optimal chromosome splitting and this feature is useful for (a) reducing the execution time and (b) majority of the chunks will be completed at the sametime. Figure (b) will be an example for chromosome split table 
+As we know, the Wheat genome size is 5x bigger than human genome. To efficiently process the GenotypeGVCFs, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. We furtehr developed a load balancing model for optimal chromosome splitting and this feature is useful for (a) reducing the execution time and (b) majority of the chunks will be completed at the sametime. Figure (b) will be an example for chromosome split table, which has four entities: (i) Chromosome number (ii) Chunk number (iii) start position and (iv) end position. This chromosome split table provides disjoint chunks and hence any GATK tools can be executed independently without any prerequisites.  
 
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Chr_split.png)
 <p align="center"> Figure (b) Chromosome split intervals </p>
 <br/>
 
 ## 3. Downstream analysis
-
+Based on the chromosome split table, we developed an automated downstrean analysis workflow described in figure (c). Here, variant instance of downstream analysis workflow will be executed with disjoint chunks intervals. Once all the chunks are executed, GATK mergeVCF will combine all the intervals in the same order of the chromosome split.   
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Downstream_analysis.png)
 <p align="center"> Figure (c) Downstrean analysis </p>
 <br/>
-Downstream_analysis.png
+
