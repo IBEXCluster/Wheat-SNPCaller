@@ -47,8 +47,15 @@ tabix version 0.2.6 <br/>
 <br/>
 
 ## 2. Chromosome split table 
-As we know, the Wheat genome size is 5x bigger than human genome. To efficiently process the GenotypeGVCFs, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. We furtehr developed a load balancing model for optimal chromosome splitting. 
+As we know, the Wheat genome size is 5x bigger than human genome. To efficiently process the GenotypeGVCFs, every chromosome will be split into multiple chunks based on the availability of the computing resources. For example, the chromosome split intervals will be smaller only when the larger number of CPU resources available. We furtehr developed a load balancing model for optimal chromosome splitting and this feature is useful for (a) reducing the execution time and (b) majority of the chunks will be completed at the sametime. Figure (b) will be an example for chromosome split table 
 
 ![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Chr_split.png)
 <p align="center"> Figure (b) Chromosome split intervals </p>
 <br/>
+
+## 3. Downstream analysis
+
+![](https://www.hpc.kaust.edu.sa/sites/default/files/files/public/workflows/Downstream_analysis.png)
+<p align="center"> Figure (c) Downstrean analysis </p>
+<br/>
+Downstream_analysis.png
